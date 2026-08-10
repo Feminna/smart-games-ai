@@ -411,7 +411,7 @@ export function DecisionTree({ pruned }: { pruned: boolean }) {
   ];
   const cut = pruned ? [5, 6] : [];
   return (
-    <svg viewBox="0 0 400 190" className="mt-6 w-full">
+    <svg viewBox="0 0 400 190" className="mt-6 h-[190px] w-full">
       {edges.map(([a, b], i) => (
         <motion.line
           key={i}
