@@ -158,8 +158,8 @@ function TicTacToe() {
               return (
                 <motion.button
                   key={i}
-                  whileHover={!cell && !finished ? { scale: 1.03 } : undefined}
-                  whileTap={!cell && !finished ? { scale: 0.96 } : undefined}
+                  whileHover={{ scale: !cell && !finished ? 1.03 : 1 }}
+                  whileTap={{ scale: !cell && !finished ? 0.96 : 1 }}
                   onClick={() => !aiTurn && !finished && !cell && play(i)}
                   disabled={Boolean(cell) || finished || aiTurn}
                   aria-label={`Square ${i + 1}${cell ? `, ${cell}` : ", empty"}`}
