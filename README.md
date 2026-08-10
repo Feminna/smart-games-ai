@@ -1,669 +1,317 @@
 # BoardMaster AI
 
-BoardMaster AI
+## Overview
 
-Create a fully functional, production-quality web application called BoardMaster AI, an advanced strategy gaming platform that combines Tic-Tac-Toe AI, Connect-4 AI, and Checkers AI into a single immersive experience.
+BoardMaster AI is a modern multi-game artificial intelligence platform that combines three classic strategy games into a single intelligent gaming experience:
 
-The application should not look like a typical student project or a collection of separate games. It should feel like a premium AI-powered gaming platform designed by a professional product design team.
+* Tic-Tac-Toe AI
+* Connect-4 AI
+* Checkers AI
 
-Design Vision
+The platform is designed to demonstrate and compare different game-playing AI algorithms while providing an engaging, interactive, and educational environment for users. Players can compete against AI opponents, analyze strategies, receive move recommendations, and learn how advanced decision-making algorithms work in real time.
 
-Design a futuristic strategy command center where users compete against intelligent AI opponents.
+---
 
-Avoid:
+# Key Features
 
-Generic card layouts
+## Intelligent AI Opponents
 
-Basic dashboards
+### Tic-Tac-Toe AI
 
-Repetitive page structures
+* Unbeatable AI opponent
+* Minimax Algorithm
+* Alpha-Beta Pruning
+* Move recommendation system
+* Human vs AI
+* Human vs Human
+* AI vs AI mode
 
-Traditional gaming website designs
+### Connect-4 AI
 
-Overused neon cyberpunk aesthetics
+* Strategic AI gameplay
+* Minimax Search
+* Alpha-Beta Pruning Optimization
+* Difficulty levels
+* Winning move prediction
+* Board analysis and recommendations
 
-Instead create:
+### Checkers AI
 
-Premium glassmorphism
+* Monte Carlo Tree Search (MCTS)
+* Advanced move evaluation
+* AI simulation engine
+* Human vs AI gameplay
+* AI vs AI matches
+* Move quality visualization
 
-Floating layered interfaces
+---
 
-Dynamic gradients
+# Educational AI Learning Center
 
-Soft shadows
+BoardMaster AI is more than a gaming platform.
 
-Smooth micro-interactions
+The application includes an interactive learning section where users can understand:
 
-AI visualization effects
+* Minimax Algorithm
+* Alpha-Beta Pruning
+* Monte Carlo Tree Search (MCTS)
 
-Intelligent move prediction animations
+Visual demonstrations help users explore decision trees, search paths, pruning techniques, and AI simulations.
 
-Responsive layouts
+---
 
-Modern typography
+# Analytics Dashboard
 
-Accessible UX
+Track gameplay and performance through an advanced analytics system.
 
-Design inspiration:
+Features include:
 
-Apple Vision Pro UI
+* Total games played
+* Win/Loss ratio
+* Draw statistics
+* AI recommendation accuracy
+* Difficulty-wise performance
+* Strategy insights
+* Historical game analysis
 
-Linear
+---
 
-Notion Calendar
+# User Management
 
-Arc Browser
+Registered users can:
 
-Chess.com premium experience
+* Create an account
+* Log in securely
+* Customize profiles
+* Save game history
+* Unlock achievements
+* View rankings
+* Track progress
 
-Figma design language
+Guest mode is also available for quick gameplay.
 
-Color Palette:
+---
 
-Primary:
+# Achievement System
 
-Deep Indigo (#141B34)
+Players can earn achievements such as:
 
-Midnight Blue (#0F172A)
+* First Victory
+* Strategic Thinker
+* Tic-Tac-Toe Champion
+* Connect-4 Expert
+* Checkers Master
+* AI Challenger
+* Grandmaster
 
-Accent:
+---
 
-Electric Violet (#8B5CF6)
+# Technology Stack
 
-Cyan Glow (#06B6D4)
+## Frontend
 
-Support:
+* React.js
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* React Router
 
-Soft White (#F8FAFC)
+## Backend
 
-Light Gray (#CBD5E1)
+* Node.js
+* Express.js
 
-Success:
+## Database
 
-Emerald (#10B981)
+* PostgreSQL / SQLite
 
-Danger:
+## Authentication
 
-Rose (#FB7185)
+* JWT Authentication
+* Google OAuth Login
 
-Application Structure
+## AI Algorithms
 
-Landing Page
+### Tic-Tac-Toe
 
-Purpose:
-Introduce the platform.
+* Minimax
+* Alpha-Beta Pruning
 
-Sections:
+### Connect-4
 
-Hero Section
+* Minimax
+* Alpha-Beta Pruning
+* Heuristic Evaluation
 
-Large animated headline:
+### Checkers
 
-"Challenge Artificial Intelligence. Master Strategy."
+* Monte Carlo Tree Search (MCTS)
 
-Animated AI brain visualization.
+---
 
-Floating game boards around hero section.
+# System Modules
 
-Buttons:
+## Module 1 – Authentication
 
-Start Playing
+* Registration
+* Login
+* User Profile
+* Session Management
 
-Explore Algorithms
+## Module 2 – Dashboard
 
-Interactive mouse tracking effects.
+* Game Navigation
+* Statistics Overview
+* Recent Activity
 
-Features Section
+## Module 3 – Tic-Tac-Toe AI
 
-Three interactive cards:
+* Intelligent gameplay
+* Move analysis
+* AI recommendations
 
-Tic-Tac-Toe
+## Module 4 – Connect-4 AI
 
-Connect-4
+* Strategic gameplay
+* Move prediction
+* Board evaluation
 
-Checkers
+## Module 5 – Checkers AI
 
-Each card should:
+* MCTS-based AI
+* Simulation engine
+* Advanced strategy analysis
 
-Expand on hover
+## Module 6 – Analytics
 
-Show AI algorithm used
+* Performance tracking
+* Charts and reports
+* Game history
 
-Show difficulty level
+## Module 7 – Learning Center
 
-Display live demo animation
+* Algorithm explanations
+* Interactive visualizations
+* Educational content
 
-AI Technology Section
+---
 
-Interactive timeline explaining:
+# AI Algorithms Used
 
-Minimax
+## Minimax Algorithm
 
-Alpha-Beta Pruning
+Minimax evaluates all possible future moves and chooses the move that maximizes the player's chances of winning while minimizing losses.
 
-Monte Carlo Tree Search
+Used in:
 
-User can click each algorithm.
+* Tic-Tac-Toe
+* Connect-4
 
-Visual explanation appears.
+---
 
-Animated decision trees.
+## Alpha-Beta Pruning
 
-Statistics Section
+Alpha-Beta Pruning improves Minimax efficiency by eliminating branches that cannot affect the final decision.
 
-Live counters:
+Benefits:
 
-Games Played
+* Faster search
+* Reduced computation
+* Better performance
 
-AI Decisions Made
+Used in:
 
-Win Predictions Generated
+* Tic-Tac-Toe
+* Connect-4
 
-Active Players
+---
 
-Footer
+## Monte Carlo Tree Search (MCTS)
 
-Modern footer.
+MCTS performs numerous random simulations and uses the outcomes to determine the most promising move.
 
-Links:
+Stages:
 
-About
+1. Selection
+2. Expansion
+3. Simulation
+4. Backpropagation
 
-Documentation
+Used in:
 
-Privacy
+* Checkers
 
-Contact
+---
 
-Authentication
+# Project Objectives
 
-Login Page
+* Develop intelligent game-playing agents.
+* Demonstrate advanced AI search techniques.
+* Compare different decision-making algorithms.
+* Provide educational insights into game AI.
+* Create an engaging and modern gaming platform.
 
-Animated strategy board background.
+---
 
-Fields:
+# Expected Outcomes
 
-Email
+* Unbeatable Tic-Tac-Toe AI.
+* Strong Connect-4 AI opponent.
+* Strategic Checkers AI powered by MCTS.
+* Interactive AI learning experience.
+* Comprehensive player analytics.
+* Unified multi-game strategy platform.
 
-Password
+---
 
-Buttons:
+# Future Enhancements
 
-Login
+* Online multiplayer support
+* Global leaderboard
+* Real-time matchmaking
+* AI training mode
+* Reinforcement Learning integration
+* Mobile application
+* Tournament mode
+* Voice-assisted gameplay
+* Custom AI difficulty creation
 
-Continue as Guest
+---
 
-Social login:
+# Installation
 
-Google
+```bash
+git clone https://github.com/your-repository/boardmaster-ai.git
 
-GitHub
+cd boardmaster-ai
 
-Features:
+npm install
 
-Password visibility toggle
-
-Validation
-
-Error handling
-
-Register Page
-
-Fields:
-
-Username
-
-Email
-
-Password
-
-Confirm Password
-
-Avatar generator.
-
-Strength indicator.
-
-Terms acceptance.
-
-Main Dashboard
-
-Purpose:
-
-Central gaming hub.
-
-Sidebar
-
-Icons:
-
-Dashboard
-
-Tic-Tac-Toe
-
-Connect-4
-
-Checkers
-
-Analytics
-
-Settings
-
-Profile
-
-Expandable sidebar.
-
-Welcome Section
-
-Shows:
-
-User avatar
-
-Level
-
-Ranking
-
-Daily challenge card.
-
-Recent Activity
-
-Game history.
-
-Statistics.
-
-Achievements.
-
-AI Insights Panel
-
-Displays:
-
-Favorite game
-
-Win rate
-
-Strategic tendencies
-
-Generated dynamically.
-
-Tic-Tac-Toe Module
-
-Dedicated page.
-
-Game Board
-
-3×3 grid.
-
-Smooth animations.
-
-Winning line animation.
-
-Controls
-
-Choose:
-
-Human vs AI
-
-AI vs AI
-
-Human vs Human
-
-Difficulty:
-
-Easy
-
-Medium
-
-Impossible
-
-AI Analysis Panel
-
-Displays:
-
-Current board evaluation.
-
-Possible outcomes.
-
-Best move recommendation.
-
-Decision tree visualization.
-
-Match Summary
-
-After game:
-
-Winner
-
-Number of moves
-
-Strategy score
-
-Replay button.
-
-Connect-4 Module
-
-Dedicated page.
-
-Board Interface
-
-Professional Connect-4 board.
-
-Animated disc dropping.
-
-Particle effects.
-
-Winning sequence highlight.
-
-AI Engine
-
-Algorithms:
-
-Minimax
-
-Alpha-Beta Pruning
-
-Depth selector.
-
-Recommendation Mode
-
-AI suggests:
-
-Best move.
-
-Reasoning.
-
-Probability of winning.
-
-Game Analysis
-
-Heatmap visualization.
-
-Danger zones.
-
-Winning opportunities.
-
-Checkers Module
-
-Dedicated page.
-
-Game Board
-
-8×8 board.
-
-Realistic piece movement.
-
-King promotion animation.
-
-AI Features
-
-Monte Carlo Tree Search.
-
-Simulation count selector.
-
-Move quality indicator.
-
-AI Thinking Visualizer
-
-Shows:
-
-Nodes explored.
-
-Current simulations.
-
-Best path discovered.
-
-Probability charts.
-
-Advanced Mode
-
-AI vs AI battle.
-
-Real-time analysis.
-
-Analytics Page
-
-Purpose:
-
-Track performance.
-
-Charts
-
-Games played.
-
-Win rates.
-
-Difficulty comparison.
-
-Average decision time.
-
-AI Performance Metrics
-
-Minimax efficiency.
-
-Alpha-Beta pruning savings.
-
-MCTS simulations.
-
-Interactive Filters
-
-By:
-
-Game
-
-Date
-
-Difficulty
-
-Profile Page
-
-User information.
-
-Statistics
-
-Total games.
-
-Wins.
-
-Losses.
-
-Draws.
-
-Achievements.
-
-Achievement System
-
-Examples:
-
-First Victory.
-
-AI Challenger.
-
-Connect-4 Master.
-
-Checkers Strategist.
-
-Grandmaster.
-
-Settings Page
-
-Theme settings.
-
-Language settings.
-
-AI preferences.
-
-Notification settings.
-
-Accessibility options.
-
-Algorithm Learning Center
-
-Educational section.
-
-Purpose:
-
-Teach users AI concepts.
-
-Minimax Page
-
-Interactive tree.
-
-User can explore branches.
-
-Alpha-Beta Pruning Page
-
-Shows pruning process visually.
-
-Monte Carlo Tree Search Page
-
-Displays:
-
-Selection
-
-Expansion
-
-Simulation
-
-Backpropagation
-
-Animations.
-
-Backend Requirements
-
-Implement complete backend.
-
-Authentication.
-
-Session management.
-
-Game storage.
-
-Leaderboard.
-
-Statistics.
-
-Achievements.
-
-User profiles.
-
-API endpoints.
-
-AI Requirements
-
-Tic-Tac-Toe
-
-Minimax
-
-Alpha-Beta Pruning
-
-Unbeatable AI
-
-Connect-4
-
-Minimax
-
-Alpha-Beta Pruning
-
-Depth search
-
-Checkers
-
-Monte Carlo Tree Search
-
-Heuristic evaluation
-
-Database Schema
-
-Users
-
-GameHistory
-
-Achievements
-
-Leaderboard
-
-Settings
-
-Analytics
-
-AIEvaluations
-
-Responsiveness
-
-Desktop.
-
-Tablet.
-
-Mobile.
-
-All pages fully responsive.
-
-Animations
-
-Use Framer Motion.
-
-Page transitions.
-
-Hover effects.
-
-Board interactions.
-
-AI thinking animations.
-
-Loading states.
-
-Micro-interactions.
-
-Accessibility
-
-Keyboard navigation.
-
-Screen reader support.
-
-Proper contrast.
-
-Responsive typography.
-
-Deliverables
-
-Generate:
-
-Complete frontend.
-
-Complete backend.
-
-Database models.
-
-Authentication.
-
-Working AI algorithms.
-
-Leaderboard system.
-
-Analytics dashboard.
-
-Responsive design.
-
-Modern UI/UX.
-
-Fully functional application ready for deployment.
-
-The final result should feel like a premium AI gaming platform, combining education, strategy, analytics, and intelligent gameplay into one cohesive experience rather than three separate games placed inside a dashboard.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/29ce28d0-69b5-4e65-b2fd-86fcafa635d4).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
 npm run dev
 ```
+
+Backend:
+
+```bash
+cd server
+
+npm install
+
+npm start
+```
+
+---
+
+# Target Users
+
+* Students learning Artificial Intelligence
+* Game enthusiasts
+* AI researchers
+* Educational institutions
+* Developers studying search algorithms
+
+---
+
+# Conclusion
+
+BoardMaster AI is a comprehensive AI-powered gaming platform that combines entertainment, education, and advanced computational intelligence. By integrating Tic-Tac-Toe, Connect-4, and Checkers into a single ecosystem, the project demonstrates the practical application of Minimax, Alpha-Beta Pruning, and Monte Carlo Tree Search algorithms while delivering an engaging user experience.
