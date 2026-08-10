@@ -10,33 +10,102 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as LearnRouteImport } from './routes/learn'
+import { Route as PlayCheckersRouteImport } from './routes/play.checkers'
+import { Route as PlayConnect4RouteImport } from './routes/play.connect-4'
+import { Route as PlayTicTacToeRouteImport } from './routes/play.tic-tac-toe'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnRoute = LearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayCheckersRoute = PlayCheckersRouteImport.update({
+  id: '/play/checkers',
+  path: '/play/checkers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayConnect4Route = PlayConnect4RouteImport.update({
+  id: '/play/connect-4',
+  path: '/play/connect-4',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlayTicTacToeRoute = PlayTicTacToeRouteImport.update({
+  id: '/play/tic-tac-toe',
+  path: '/play/tic-tac-toe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/learn': typeof LearnRoute
+  '/play/checkers': typeof PlayCheckersRoute
+  '/play/connect-4': typeof PlayConnect4Route
+  '/play/tic-tac-toe': typeof PlayTicTacToeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/learn': typeof LearnRoute
+  '/play/checkers': typeof PlayCheckersRoute
+  '/play/connect-4': typeof PlayConnect4Route
+  '/play/tic-tac-toe': typeof PlayTicTacToeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/learn': typeof LearnRoute
+  '/play/checkers': typeof PlayCheckersRoute
+  '/play/connect-4': typeof PlayConnect4Route
+  '/play/tic-tac-toe': typeof PlayTicTacToeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/analytics'
+    | '/learn'
+    | '/play/checkers'
+    | '/play/connect-4'
+    | '/play/tic-tac-toe'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/analytics'
+    | '/learn'
+    | '/play/checkers'
+    | '/play/connect-4'
+    | '/play/tic-tac-toe'
+  id:
+    | '__root__'
+    | '/'
+    | '/analytics'
+    | '/learn'
+    | '/play/checkers'
+    | '/play/connect-4'
+    | '/play/tic-tac-toe'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnalyticsRoute: typeof AnalyticsRoute
+  LearnRoute: typeof LearnRoute
+  PlayCheckersRoute: typeof PlayCheckersRoute
+  PlayConnect4Route: typeof PlayConnect4Route
+  PlayTicTacToeRoute: typeof PlayTicTacToeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +117,52 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn': {
+      id: '/learn'
+      path: '/learn'
+      fullPath: '/learn'
+      preLoaderRoute: typeof LearnRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/checkers': {
+      id: '/play/checkers'
+      path: '/play/checkers'
+      fullPath: '/play/checkers'
+      preLoaderRoute: typeof PlayCheckersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/connect-4': {
+      id: '/play/connect-4'
+      path: '/play/connect-4'
+      fullPath: '/play/connect-4'
+      preLoaderRoute: typeof PlayConnect4RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/play/tic-tac-toe': {
+      id: '/play/tic-tac-toe'
+      path: '/play/tic-tac-toe'
+      fullPath: '/play/tic-tac-toe'
+      preLoaderRoute: typeof PlayTicTacToeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnalyticsRoute: AnalyticsRoute,
+  LearnRoute: LearnRoute,
+  PlayCheckersRoute: PlayCheckersRoute,
+  PlayConnect4Route: PlayConnect4Route,
+  PlayTicTacToeRoute: PlayTicTacToeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
